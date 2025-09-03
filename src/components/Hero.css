@@ -1,0 +1,154 @@
+.hero-section {
+    margin-top: 3em;
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(135deg, #1C352D 20%, #0FC4AF 100%);
+    color: white;
+    padding: 0rem 3rem;
+    position: relative;
+}
+
+/* ---------- Right Content ---------- */
+.hero-content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-title {
+    font-family: "Yaldevi", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 2.4rem;
+    margin-bottom: -1rem;
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+.beautiful-frames {
+    font-family: "Viaoda Libre", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4.5rem;
+}
+
+.hero-btn {
+    padding: 0.8rem 1.8rem;
+    font-size: 1rem;
+    background: #a3d3b5;
+    color: #000;
+    border: none;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.hero-btn:hover {
+    background: #0FC4AF;
+    color: white;
+}
+
+/* ---------- Left Frame ---------- */
+.hero-frame {
+    width: 43%;
+    height: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Frame border */
+.frame-border {
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 10;
+    pointer-events: none;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Image slider positioned inside frame */
+.frame-slider {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    width: 50%;
+    /* adjust to fit frame opening */
+    height: 70%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    border-radius: 8px;
+    z-index: 5;
+}
+
+/* Track moves in steps */
+.slider-track {
+    display: flex;
+    width: 500%;
+    /* 5 images × 100% */
+    height: 100%;
+    animation: stepSlide 10s infinite;
+    /* 2s per image × 5 images */
+}
+
+/* Each image takes full width of container */
+.slider-image {
+    flex: 0 0 20%;
+    /* Each image is 20% of track (100% ÷ 5 images) */
+    width: 20%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Step animation - moves in discrete steps with pauses */
+@keyframes stepSlide {
+
+    0%,
+    18% {
+        transform: translateX(0%);
+        /* Show image 1 */
+    }
+
+    20%,
+    38% {
+        transform: translateX(-20%);
+        /* Show image 2 */
+    }
+
+    40%,
+    58% {
+        transform: translateX(-40%);
+        /* Show image 3 */
+    }
+
+    60%,
+    78% {
+        transform: translateX(-60%);
+        /* Show image 4 */
+    }
+
+    80%,
+    98% {
+        transform: translateX(-80%);
+        /* Show image 5 */
+    }
+
+    100% {
+        transform: translateX(0%);
+        /* Back to image 1 */
+    }
+}

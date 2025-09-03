@@ -1,0 +1,83 @@
+.dancing-section {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.dancing-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.dancing-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* pushes text to right side */
+  padding: 2rem 4rem;
+}
+
+.dancing-text {
+  max-width: 450px;
+  color: white;
+  text-align: right;
+}
+
+.dancing-text h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.dancing-text p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.see-collection-btn {
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  background: white;
+  color: black;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.see-collection-btn:hover {
+  background: #f0f0f0;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dancing-section {
+    height: 50vh;
+  }
+
+  .dancing-overlay {
+    justify-content: center; /* center text for small screens */
+    padding: 1rem;
+  }
+
+  .dancing-text {
+    text-align: center;
+  }
+
+  .dancing-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .dancing-text p {
+    font-size: 0.9rem;
+  }
+}

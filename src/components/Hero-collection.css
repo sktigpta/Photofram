@@ -1,0 +1,247 @@
+.heroCollection-section {
+  width: 100%;
+  min-height: 100vh;
+  background: white;
+  padding: 1rem 5rem;
+  color: #1C352D;
+}
+
+.collection-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Header Styles */
+.collection-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.collection-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1C352D;
+  position: relative;
+}
+
+.collection-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(135deg, #1C352D 0%, #0FC4AF 100%);
+  border-radius: 2px;
+}
+
+.collection-subtitle {
+  font-size: .8rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Filter Styles */
+.filter-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  padding: 0 1rem;
+}
+
+.filter-btn {
+  padding: 0.5rem 1rem;
+  font-size: .8rem;
+  font-weight: 300;
+  border: 1px solid #e0e0e0;
+  border-radius: 50px;
+  background: white;
+  color: #1C352D;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 120px;
+}
+
+.filter-btn:hover {
+  border-color: #0FC4AF;
+  color: #0FC4AF;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(15, 196, 175, 0.2);
+}
+
+.filter-btn.active {
+  background: #075E54;
+  color: white;
+  border-color: transparent;
+}
+
+/* Frames Grid - Fixed Grid System */
+.frames-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns for desktop */
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.frame-card {
+  background: white;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid #f0f0f0;
+  aspect-ratio: 1; /* Maintain square aspect ratio */
+  display: flex;
+  flex-direction: column;
+}
+
+.frame-card:hover {
+  border-color: #0FC4AF;
+}
+
+.frame-image-container {
+  position: relative;
+  width: 100%;
+  flex: 1; /* Takes up remaining space */
+  overflow: hidden;
+  background: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Frame image styles */
+.frame-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.frame-card:hover .frame-image {
+  transform: scale(1.05);
+}
+
+.frame-info {
+  padding: 1rem;
+  text-align: center;
+  background: white;
+}
+
+.frame-name {
+  font-size: 1rem;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+  color: #1C352D;
+}
+
+.frame-category {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  background: rgba(15, 196, 175, 0.1);
+  color: #0FC4AF;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Load More Button */
+.load-more-container {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.load-more-btn {
+  padding: 1rem 3rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: transparent;
+  color: #1C352D;
+  border: 2px solid #1C352D;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.load-more-btn:hover {
+  background: #1C352D;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(28, 53, 45, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .frames-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for tablet */
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroCollection-section {
+    padding: 2rem 1rem;
+  }
+
+  .collection-title {
+    font-size: 2.2rem;
+  }
+
+  .collection-subtitle {
+    font-size: .7rem;
+  }
+
+  .filter-container {
+    gap: 0.5rem;
+  }
+
+  .filter-btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+    min-width: 100px;
+  }
+
+  .frames-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for mobile as requested */
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroCollection-section {
+    padding: 1rem 0.5rem;
+  }
+
+  .collection-title {
+    font-size: 1.8rem;
+  }
+
+  .frames-grid {
+    grid-template-columns: repeat(2, 1fr); /* Keep 2 columns even on small phones */
+    gap: 1rem;
+  }
+
+  .filter-container {
+    flex-direction: row; /* Keep horizontal on mobile */
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .filter-btn {
+    padding: 0.5rem 1rem;
+    min-width: 80px;
+    font-size: 0.8rem;
+  }
+
+  .frame-info {
+    padding: 0.5rem;
+  }
+
+  .frame-name {
+    font-size: 0.9rem;
+  }
+}
