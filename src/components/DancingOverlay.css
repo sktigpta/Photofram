@@ -19,7 +19,8 @@
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: flex-end; /* pushes text to right side */
+  justify-content: flex-end;
+  /* pushes text to right side */
   padding: 2rem 4rem;
 }
 
@@ -65,7 +66,8 @@
   }
 
   .dancing-overlay {
-    justify-content: center; /* center text for small screens */
+    justify-content: center;
+    /* center text for small screens */
     padding: 1rem;
   }
 

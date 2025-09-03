@@ -5,9 +5,8 @@
   --accent-color: #0071e3;
   --transition-default: all 0.3s ease;
   --blur-amount: 15px;
-  --background-color: #1A2F28;
-  --background-translucent: rgba(26, 47, 40, 0.95);
-  --border-color: rgba(255, 255, 255, 0.1);
+  --background-color: #1a2f28f7;
+  --background-translucent: rgba(26, 47, 40, 0.165);
 }
 
 .navbar {
